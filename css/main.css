@@ -1,0 +1,58 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: inherit;
+}
+body {
+  font-family: sans-serif;
+  color: #333;
+  background: #fff9ef;
+  margin: 0;
+}
+h1, h2 {
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+/* classes */
+.wrapper {
+    max-width: 800px;
+    border: 1px solid #ccc;
+    margin: 2rem auto;
+    padding: 2rem 3rem;
+}
+/* links */
+a {
+  color: #237b93;
+  text-decoration: underline;
+}
+a:hover {
+  color: #fc9402;
+  text-decoration: none;
+}
+
+/* media queries */
+@media (max-width: 860px) {
+    .wrapper {
+        border: none;
+    }
+}
+@media (max-width: 650px) {
+    .wrapper {
+        margin: 0;
+        padding: 1rem;
+    }
+}

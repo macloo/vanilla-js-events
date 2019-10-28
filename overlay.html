@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Vanilla JavaScript Overlay Example </title>
+	<link rel="stylesheet" href="css/overlay.css">
+</head>
+
+<body>
+    <div class="wrapper"><!-- contains entire page -->
+
+    <h1>JavaScript Content Overlays</h1>
+
+	<p>Look for the arrows &rightarrow; below. An arrow indicates a place to click.</p>
+
+    <p>An overlay is some content that appears on top of the content already in the browser window. When an overlay appears, it is usually necessary to click it or tap it to make it go away. In most cases, the page cannot be scrolled while the overlay is visible. You must make it go away to resume normal interactions with the page. An overlay is also called a modal.</p>
+
+	<p>The overlay content will be contained in an HTML grouping element such as DIV, SECTION, or ASIDE.</p>
+
+	<p>This overlay element might exist in the normal flow of the DOM and be hidden (with JavaScript or CSS). Alternatively, it might be spawned with JavaScript because of some event (such as scroll depth, or a click) and not exist at all for users or devices that have disabled JavaScript.</p>
+
+	<p id="first-overlay">&rightarrow; Click this text to see a simple overlay appear (<em>example 1</em>). Click anywhere to remove it.</p>
+
+	<p>That's a combination of a full-screen fixed-position DIV (<code>.full-screen</code> in the CSS) and adding a CSS style to the body &mdash; <code>overflow: hidden</code> &mdash; to prevent scrolling while the overlay is visible.</p>
+
+	<p id="second-overlay">&rightarrow; Click this text to see a centered text-box overlay appear (<em>example 2</em>). Click inside the box to remove it.</p>
+
+	<p>The second example combines the same full-screen fixed-position DIV (but without any background color) and an additional DIV (the orange box) to which text has been added. To center the orange box both horizontally and vertically, the full-screen DIV has flex-contaner styles added to it (these are in the CSS file for this page: see <code>.full-screen-flex</code> there).</p>
+
+	<p>In our third overlay example, we'll invite the user to click a photo to see a larger verison as an overlay. The JavaScript is written so that any image on the page can be enlarged in the same way (if it has the CSS class <code>.expand-image</code>).</p>
+
+	<p>&rightarrow; Click the photo below to see the overlay. Click the large one to remove it.</p>
+
+	<img src="images/bruce_at_kennedy_optimized.jpg" alt="Photo: President Obama and the First Lady applaud Bruce Springsteen at the Kennedy Center, 2009" class="expand-image">
+
+	<p class="credit">Photo credit: <a href="https://flic.kr/p/7okcTK" target="_blank">U.S. government work</a></p>
+
+	<p class="caption">Caption provided by copyright holder: President Barack Obama and First Lady Michelle Obama applaud musician Bruce Springsteen during the Kennedy Center Honors at the John F. Kennedy Center for the Performing Arts in Washington, D.C., Dec. 6, 2009. (Official White House Photo by Pete Souza)</p>
+
+	<p>&rightarrow;To demonstrate that the same code will handle any image on the page that has the CSS class <code>.expand-image</code>, try clicking each of the images below.</p>
+
+	<div id="image-container">
+		<img src="images/vancouver1.jpg" alt="Photo of First Nations mask carving" class="expand-image flex-image">
+		<img src="images/vancouver2.jpg" alt="Photo of First Nations mask carving" class="expand-image flex-image">
+		<img src="images/vancouver3.jpg" alt="Photo of First Nations mask carving" class="expand-image flex-image">
+		<img src="images/vancouver4.jpg" alt="Photo of First Nations mask carving" class="expand-image flex-image">
+	</div>
+
+	<p>The four small images above have an additional CSS class, <code>.flex-image</code>, to help them fit in the space. All four photos by Mindy McAdams, taken at the Museum of Anthropology on the University of British Columbia campus in Vancouver, British Columbia, Canada.</p>
+
+	<p>For details about using JavaScript and CSS to stop content behind the overlay from scrolling, see <a href="https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/">Prevent Page Scrolling When a Modal is Open</a> (September 2019).</p>
+
+	<footer>
+		<p>Examples and all code by <a href="https://mindymcadams.com/">Mindy McAdams</a><br>
+			This code is intended for sharing and use by anyone</p>
+	</footer>
+
+</div><!-- close wrapper -->
+
+<!-- script tags at the end -->
+<script src="js/overlay.js"></script>
+
+</body>
+</html>
