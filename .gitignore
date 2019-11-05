@@ -10,3 +10,6 @@ Thumbs.db
 .Spotlight-V100
 .TemporaryItems
 .Trashes
+
+# folders
+experimental/*
